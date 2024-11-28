@@ -18,7 +18,6 @@ Coding interviews are tough, and they're only getting tougher, typically demandi
 - 101 real coding interview problems with detailed solutions.
 - Intuitive explanations that guide you through each problem as if you were solving it in a live interview.
 - 1000+ diagrams to illustrate key concepts and patterns.
-<br />
 
 
 ### Table of Contents
