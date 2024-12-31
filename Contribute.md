@@ -1,6 +1,6 @@
 # Contributing to the Repository
 
-We welcome contributions to the repository! Of course, your contributions will be credited. If you’d like to add solutions in a language of your choice, or amend an existing solution in any language, here’s how you can contribute.
+We’re excited to have you contribute to this repository, and your efforts will be fully credited! Whether you want to add solutions in a new programming language or improve existing ones, here’s how you can get started:
 
 1. Let me know what you plan to contribute! The best way to do this is by joining our discord server (see page 2 of the book). Communication is important to prevent you labouring on a set of quesitons that someone's already working on.
 
@@ -8,7 +8,7 @@ We welcome contributions to the repository! Of course, your contributions will b
 
 3. Take a close look at how the Python solutions are organized. Your contributions should align with this structure (e.g., folder organization, file naming). 
 
-4. Always **create a new branch** for your additions or changes. We recommend creating separate branches for each chapter or feature you’re contributing. Example: `git checkout -b java-solutions-linked-lists`.
+4. Always **create a new branch** for your additions or changes. We recommend creating separate branches for each chapter you’re contributing. Example: `git checkout -b java-solutions-linked-lists`.
 
 5. Stay true to existing code comments and structure. Feel free to add additional comments for clarity, especially if any language-specific nuances are included.
 
