@@ -46,7 +46,7 @@ Chapter 17: Sort and Search\
 Chapter 18: Bit Manipulation\
 Chapter 19: Math and Geometry
 
-### Now available on Amazon ➞ https://a.co/d/dDMKLfM
+### Now available on Amazon ➞ [https://geni.us/q7svoz](https://geni.us/q7svoz)
 
 ---
 
