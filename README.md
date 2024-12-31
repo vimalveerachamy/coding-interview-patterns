@@ -11,6 +11,9 @@ visiting our website to practice all 101 problems. Engaging with these problems 
 going to reinforce your learning, and better prepare you for high‐stakes coding interviews:\
 https://bit.ly/run-code
 
+## Contributing to the Repo
+We welcome contributions to the repository! Of course, your contributions will be credited. If you’d like to add solutions in a language of your choice, or amend an existing solution in any language, please read the instructions provided in [Contribute.md](Contribute.md).
+
 ## 📙 About the Book
 
 Coding interviews are tough, and they're only getting tougher, typically demanding months of preparation. What we all want is a way to master algorithms and data structures without having to spend countless hours sifting through endless, unfocussed resources. Introducing "Coding Interview Patterns," your complete guide to mastering the key patterns needed to ace your next coding interview.<br />
@@ -55,6 +58,7 @@ Alex Xu is a software engineer and author. His book 'System Design Interview - A
 
 **Shaun Gunawardane**\
 Shaun Gunawardane is a competitive programmer with experience at Google. As a founder of a not-for-profit coding program, he has helped hundreds of students secure software engineering positions at leading companies like Google, Amazon, and Jane Street.
+
 
 ## 📞 Contact
 
