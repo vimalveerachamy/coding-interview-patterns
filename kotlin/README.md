@@ -1,6 +1,10 @@
 # Coding Interview Patterns - All Solutions in Kotlin
 
-Table of Contents
+## Note
+
+As the time repository was created, Latest JDK that supporting Kotlin is JDK 21
+
+## Table of Contents
 1. [ ] Chapter 1: Two Pointers
 2. [ ] Chapter 2: Hash Maps and Sets
 3. [ ] Chapter 3: Linked Lists
