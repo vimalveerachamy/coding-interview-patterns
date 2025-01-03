@@ -1,0 +1,9 @@
+# idea files
+.idea
+java-solutions.iml
+
+# build files
+out/*
+
+# DS_Store
+.DS_Store
