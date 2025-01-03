@@ -11,8 +11,8 @@ class TripletSumBruteForceTest {
     fun `Verify solution`() {
         val result = question.solution(listOf(0, -1, 2, -3, 1))
         assertEquals(2, result.size)
-        assertEquals(result[0], listOf(-3, 1, 2))
-        assertEquals(result[1], listOf(-1, 0, 1))
+        assertEquals(listOf(-3, 1, 2), result[0])
+        assertEquals(listOf(-1, 0, 1), result[1])
     }
 
 }

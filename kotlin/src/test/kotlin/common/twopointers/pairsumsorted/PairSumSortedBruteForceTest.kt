@@ -13,14 +13,14 @@ class PairSumSortedBruteForceTest {
     fun `Expected pair is found and valid`() {
         assertAll(
             Executable {
-                assertEquals(question.solution(intArrayOf(-5, -2, 3, 4, 6), 7), listOf(2, 3))
+                assertEquals(listOf(2, 3), question.solution(intArrayOf(-5, -2, 3, 4, 6), 7))
             },
             Executable {
-                assertEquals(question.solution(intArrayOf(1, 1, 1), 2), listOf(0, 1))
+                assertEquals(listOf(0, 1), question.solution(intArrayOf(1, 1, 1), 2))
             },
             Executable {
-                assertEquals(question.solution(intArrayOf(2, 3), 5), listOf(0, 1))
-            },
+                assertEquals(listOf(0, 1), question.solution(intArrayOf(2, 3), 5))
+            }
         )
     }
 
@@ -28,13 +28,13 @@ class PairSumSortedBruteForceTest {
     fun `Expected pair is empty`() {
         assertAll(
             Executable {
-                assertEquals(question.solution(intArrayOf(), 0), emptyList<Int>())
+                assertEquals(emptyList<Int>(), question.solution(intArrayOf(), 0))
             },
             Executable {
-                assertEquals(question.solution(intArrayOf(1), 1), emptyList<Int>())
+                assertEquals(emptyList<Int>(), question.solution(intArrayOf(1), 1))
             },
             Executable {
-                assertEquals(question.solution(intArrayOf(2, 4), 5), emptyList<Int>())
+                assertEquals(emptyList<Int>(), question.solution(intArrayOf(2, 4), 5))
             }
         )
     }

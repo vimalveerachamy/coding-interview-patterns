@@ -11,7 +11,7 @@ class ShiftZeroNaiveTest {
     fun `Test naive solution`() {
         val input = intArrayOf(0, 5, 4, 0, 4, 5, 1, 2, 7, 0)
         question.solution(input)
-        assertContentEquals(input, intArrayOf(5, 4, 4, 5, 1, 2, 7, 0, 0, 0))
+        assertContentEquals(intArrayOf(5, 4, 4, 5, 1, 2, 7, 0, 0, 0), input)
     }
 
 }
