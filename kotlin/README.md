@@ -5,7 +5,7 @@
 As the time repository was created, Latest JDK that supporting Kotlin is JDK 21
 
 ## Table of Contents
-1. [ ] Chapter 1: Two Pointers
+1. [x] Chapter 1: Two Pointers
 2. [ ] Chapter 2: Hash Maps and Sets
 3. [ ] Chapter 3: Linked Lists
 4. [ ] Chapter 4: Fast and Slow Pointers
