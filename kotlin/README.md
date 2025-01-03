@@ -2,7 +2,8 @@
 
 ## Note
 
-As the time repository was created, Latest JDK that supporting Kotlin is JDK 21
+* As the time repository was created, Latest JDK that supporting Kotlin is JDK 21
+* Solutions are based on the question inside a `Coding Interview Patterns` book
 
 ## Table of Contents
 1. [x] Chapter 1: Two Pointers
