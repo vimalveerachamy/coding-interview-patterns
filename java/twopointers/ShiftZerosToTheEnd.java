@@ -20,31 +20,51 @@ public class ShiftZerosToTheEnd {
     public static void main(String[] args) {
         int[] test1 = new int[]{};
         new ShiftZerosToTheEnd().shiftZerosToTheEnd(test1);
-        System.out.println("Tests an empty array. Expected output: " + java.util.Arrays.toString(test1));
+        System.out.println("Tests an empty array.\n" +
+                " Input: nums=[]\n" +
+                " Expected output: []\n" +
+                " Actual output: " + java.util.Arrays.toString(test1));
 
         int[] test2 = new int[]{0};
         new ShiftZerosToTheEnd().shiftZerosToTheEnd(test2);
-        System.out.println("Tests an array with one 0. Expected output: " + java.util.Arrays.toString(test2));
+        System.out.println("Tests an array with one 0.\n" +
+                " Input: nums=[0]\n" +
+                " Expected output: [0]\n" +
+                " Actual output: " + java.util.Arrays.toString(test2));
 
         int[] test3 = new int[]{1};
         new ShiftZerosToTheEnd().shiftZerosToTheEnd(test3);
-        System.out.println("Tests an array with one 1. Expected output: " + java.util.Arrays.toString(test3));
+        System.out.println("Tests an array with one 1.\n" +
+                " Input: nums=[1]\n" +
+                " Expected output: [1]\n" +
+                " Actual output: " + java.util.Arrays.toString(test3));
 
         int[] test4 = new int[]{0, 0, 0};
         new ShiftZerosToTheEnd().shiftZerosToTheEnd(test4);
-        System.out.println("Tests an array with all 0s. Expected output: " + java.util.Arrays.toString(test4));
+        System.out.println("Tests an array with all 0s.\n" +
+                " Input: nums=[0, 0, 0]\n" +
+                " Expected output: [0, 0, 0]\n" +
+                " Actual output: " + java.util.Arrays.toString(test4));
 
         int[] test5 = new int[]{1, 3, 2};
         new ShiftZerosToTheEnd().shiftZerosToTheEnd(test5);
-        System.out.println("Tests an array with all non-zeros. Expected output: " + java.util.Arrays.toString(test5));
+        System.out.println("Tests an array with all non-zeros.\n" +
+                " Input: nums=[1, 3, 2]\n" +
+                " Expected output: [1, 3, 2]\n" +
+                " Actual output: " + java.util.Arrays.toString(test5));
 
         int[] test6 = new int[]{1, 1, 1, 0, 0};
         new ShiftZerosToTheEnd().shiftZerosToTheEnd(test6);
-        System.out.println("Tests an array with all zeros already at the end. Expected output: " + java.util.Arrays.toString(test6));
+        System.out.println("Tests an array with all zeros already at the end.\n" +
+                " Input: nums=[1, 1, 1, 0, 0]\n" +
+                " Expected output: [1, 1, 1, 0, 0]\n" +
+                " Actual output: " + java.util.Arrays.toString(test6));
 
         int[] test7 = new int[]{0, 0, 1, 1, 1};
         new ShiftZerosToTheEnd().shiftZerosToTheEnd(test7);
-        System.out.println("Tests an array with all zeros at the start. Expected output: " + java.util.Arrays.toString(test7));
-
+        System.out.println("Tests an array with all zeros at the start.\n" +
+                " Input: nums=[0, 0, 1, 1, 1]\n" +
+                " Expected output: [1, 1, 1, 0, 0]\n" +
+                " Actual output: " + java.util.Arrays.toString(test7));
     }
 }

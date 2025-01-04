@@ -28,13 +28,12 @@ public class IsPalindromeValid {
     }
 
     public static void main(String[] args) {
-        System.out.println("Tests an empty string. Expected output: " + new IsPalindromeValid().isPalindromeValid(""));
-        System.out.println("Tests a single-character string. Expected output: " + new IsPalindromeValid().isPalindromeValid("a"));
-        System.out.println("Tests a palindrome with two characters. Expected output: " + new IsPalindromeValid().isPalindromeValid("aa"));
-        System.out.println("Tests a non-palindrome with two characters. Expected output: " + new IsPalindromeValid().isPalindromeValid("ab"));
-        System.out.println("Tests a string with no alphanumeric characters. Expected output: " + new IsPalindromeValid().isPalindromeValid("!, (?)"));
-        System.out.println("Tests a palindrome with punctuation and numbers. Expected output: " + new IsPalindromeValid().isPalindromeValid("21.02.2021"));
-        System.out.println("Tests a non-palindrome with punctuation. Expected output: " + new IsPalindromeValid().isPalindromeValid("hello, world!"));
-
+        System.out.println("Tests an empty string.\n Input: s=\"\"\n Expected output: true\n Actual output: " + new IsPalindromeValid().isPalindromeValid(""));
+        System.out.println("Tests a single-character string.\n Input: s=\"a\"\n Expected output: true\n Actual output: " + new IsPalindromeValid().isPalindromeValid("a"));
+        System.out.println("Tests a palindrome with two characters.\n Input: s=\"aa\"\n Expected output: true\n Actual output: " + new IsPalindromeValid().isPalindromeValid("aa"));
+        System.out.println("Tests a non-palindrome with two characters.\n Input: s=\"ab\"\n Expected output: false\n Actual output: " + new IsPalindromeValid().isPalindromeValid("ab"));
+        System.out.println("Tests a string with no alphanumeric characters.\n Input: s=\"!, (?)\"\n Expected output: true\n Actual output: " + new IsPalindromeValid().isPalindromeValid("!, (?)"));
+        System.out.println("Tests a palindrome with punctuation and numbers.\n Input: s=\"21.02.2021\"\n Expected output: false\n Actual output: " + new IsPalindromeValid().isPalindromeValid("21.02.2021"));
+        System.out.println("Tests a non-palindrome with punctuation.\n Input: s=\"hello, world!\"\n Expected output: false\n Actual output: " + new IsPalindromeValid().isPalindromeValid("hello, world!"));
     }
 }

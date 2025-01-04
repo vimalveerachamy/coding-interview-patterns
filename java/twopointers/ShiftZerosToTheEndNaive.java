@@ -21,30 +21,50 @@ public class ShiftZerosToTheEndNaive {
     public static void main(String[] args) {
         int[] test1 = new int[]{};
         new ShiftZerosToTheEndNaive().shiftZerosToTheEndNaive(test1);
-        System.out.println("Tests an empty array. Expected output: " + Arrays.toString(test1));
+        System.out.println("Tests an empty array.\n" +
+                " Input: nums=[]\n" +
+                " Expected output: []\n" +
+                " Actual output: " + Arrays.toString(test1));
 
         int[] test2 = new int[]{0};
         new ShiftZerosToTheEndNaive().shiftZerosToTheEndNaive(test2);
-        System.out.println("Tests an array with one 0. Expected output: " + Arrays.toString(test2));
+        System.out.println("Tests an array with one 0.\n" +
+                " Input: nums=[0]\n" +
+                " Expected output: [0]\n" +
+                " Actual output: " + Arrays.toString(test2));
 
         int[] test3 = new int[]{1};
         new ShiftZerosToTheEndNaive().shiftZerosToTheEndNaive(test3);
-        System.out.println("Tests an array with one 1. Expected output: " + Arrays.toString(test3));
+        System.out.println("Tests an array with one 1.\n" +
+                " Input: nums=[1]\n" +
+                " Expected output: [1]\n" +
+                " Actual output: " + Arrays.toString(test3));
 
         int[] test4 = new int[]{0, 0, 0};
         new ShiftZerosToTheEndNaive().shiftZerosToTheEndNaive(test4);
-        System.out.println("Tests an array with all 0s. Expected output: " + Arrays.toString(test4));
+        System.out.println("Tests an array with all 0s.\n" +
+                " Input: nums=[0, 0, 0]\n" +
+                " Expected output: [0, 0, 0]\n" +
+                " Actual output: " + Arrays.toString(test4));
 
         int[] test5 = new int[]{1, 3, 2};
         new ShiftZerosToTheEndNaive().shiftZerosToTheEndNaive(test5);
-        System.out.println("Tests an array with all non-zeros. Expected output: " + Arrays.toString(test5));
+        System.out.println("Tests an array with all non-zeros.\n" +
+                " Input: nums=[1, 3, 2]\n" +
+                " Expected output: [1, 3, 2]\n" +
+                " Actual output: " + Arrays.toString(test5));
 
         int[] test6 = new int[]{1, 1, 1, 0, 0};
         new ShiftZerosToTheEndNaive().shiftZerosToTheEndNaive(test6);
-        System.out.println("Tests an array with all zeros already at the end. Expected output: " + Arrays.toString(test6));
+        System.out.println("Tests an array with all zeros already at the end.\n" +
+                " Input: nums=[1, 1, 1, 0, 0]\n" +
+                " Expected output: [1, 1, 1, 0, 0]\n" +
+                " Actual output: " + Arrays.toString(test6));
 
         int[] test7 = new int[]{0, 0, 1, 1, 1};
         new ShiftZerosToTheEndNaive().shiftZerosToTheEndNaive(test7);
-        System.out.println("Tests an array with all zeros at the start. Expected output: " + Arrays.toString(test7));
-    }
+        System.out.println("Tests an array with all zeros at the start.\n" +
+                " Input: nums=[0, 0, 1, 1, 1]\n" +
+                " Expected output: [1, 1, 1, 0, 0]\n" +
+                " Actual output: " + Arrays.toString(test7));  }
 }
