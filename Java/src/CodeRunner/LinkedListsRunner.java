@@ -1,14 +1,63 @@
 package CodeRunner;
 
-import DS.DoublyLinkedListNode;
-import LinkedLists.LRUCache;
-
-import java.util.HashMap;
+import DS.*;
+import LinkedLists.*;
+import java.util.*;
 
 public class LinkedListsRunner {
     // Code runner
     public static void main(String[] args) {
-        System.out.println(testLRUCache());
+
+        // System.out.println(testFlattenMultiLevelList());
+
+        // System.out.println(testLRUCache());
+
+    }
+
+    private static boolean testFlattenMultiLevelList() {
+
+        // Visual Representation:
+        // 1 -> 2 -> 3 -> 4 -> null
+        //      |
+        //      5 -> 6 -> 7 -> 8
+        //           |
+        //           9
+        MultiLevelListNode node1 = new MultiLevelListNode(1);
+        MultiLevelListNode node2 = new MultiLevelListNode(2);
+        MultiLevelListNode node3 = new MultiLevelListNode(3);
+        MultiLevelListNode node4 = new MultiLevelListNode(4);
+        MultiLevelListNode node5 = new MultiLevelListNode(5);
+        MultiLevelListNode node6 = new MultiLevelListNode(6);
+        MultiLevelListNode node7 = new MultiLevelListNode(7);
+        MultiLevelListNode node8 = new MultiLevelListNode(8);
+        MultiLevelListNode node9 = new MultiLevelListNode(9);
+        node1.next = node2;
+        node2.next = node3;
+        node3.next = node4;
+        node2.child = node5;
+        node5.next = node6;
+        node6.child = node9;
+        node6.next = node7;
+        node7.next = node8;
+
+        System.out.println(multiLevelListNodeToString(node1));
+        MultiLevelListNode flattened = FlattenMultiLevelList.Solution(node1);
+
+        // 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> null
+        int counter = 1;
+        MultiLevelListNode pointer = flattened;
+        while (pointer.next != null) {
+            if (pointer.val != counter) {
+                return false;
+            }
+            counter++;
+            pointer = pointer.next;
+        }
+
+        // print the flattened list
+        System.out.println(multiLevelListNodeToString(flattened));
+
+        return true;
     }
 
     private static boolean testLRUCache() {
@@ -66,4 +115,50 @@ public class LinkedListsRunner {
 
         return sb.toString();
     }
+
+    // toString for MultiLevelList
+    public static String multiLevelListNodeToString(MultiLevelListNode head) {
+        if (head == null) {
+            return "null";
+        }
+
+        StringBuilder sb = new StringBuilder();
+        Stack<MultiLevelListNode> stack = new Stack<>();
+        MultiLevelListNode current = head;
+
+        while (current != null || !stack.isEmpty()) {
+            while (current != null) {
+                sb.append(current.val);
+
+                if (current.child != null) {
+                    sb.append("![");
+                    // If there's a next node, push it onto the stack to process later
+                    if (current.next != null) {
+                        stack.push(current.next);
+                    }
+                    // Move to the child node
+                    current = current.child;
+                } else {
+                    if (current.next != null) {
+                        sb.append(" -> ");
+                    }
+                    current = current.next;
+                }
+            }
+
+            if (!stack.isEmpty()) {
+                // Close the current child list
+                sb.append("]");
+                MultiLevelListNode nextNode = stack.pop();
+                if (nextNode != null) {
+                    sb.append(" -> ");
+                }
+                current = nextNode;
+            }
+        }
+
+        sb.append(" -> null"); // Indicate the end of the list
+        return sb.toString();
+    }
+
 }
