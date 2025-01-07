@@ -16,7 +16,9 @@ public class LinkedListsRunner {
 
         // System.out.println(testLinkedListReversalRecursive());
 
-        System.out.println(testPalindromicLinkedList());
+        // System.out.println(testPalindromicLinkedList());
+
+        System.out.println(testRemoveKthLastNode());
 
         // System.out.println(testLRUCache());
 
@@ -153,6 +155,25 @@ public class LinkedListsRunner {
         }
 
         System.out.println("Both lists are palindrome");
+        return true;
+    }
+
+    private static boolean testRemoveKthLastNode() {
+        int[] valsA = {1, 2, 3, 4, 5};
+        int k = 2;
+        ListNode headA = makeList(valsA);
+        System.out.println("Printing list A before");
+        System.out.println(listNodeToString(headA));
+
+        headA = RemoveKthLastNode.Solution(headA, k);
+
+        if (!verifyLinkedList(headA, new int[] {1, 2, 4, 5})) {
+            return false;
+        }
+
+        System.out.println("Printing list A after");
+        System.out.println(listNodeToString(headA));
+
         return true;
     }
 
