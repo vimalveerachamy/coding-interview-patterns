@@ -16,6 +16,8 @@ public class LinkedListsRunner {
 
         // System.out.println(testLinkedListReversalRecursive());
 
+        System.out.println(testPalindromicLinkedList());
+
         // System.out.println(testLRUCache());
 
     }
@@ -130,6 +132,27 @@ public class LinkedListsRunner {
 
         System.out.println("Reversal of solution");
         System.out.println(listNodeToString(reversed));
+        return true;
+    }
+
+    private static boolean testPalindromicLinkedList() {
+        int[] valsA = {1, 2, 3, 4, 5, 4, 3, 2, 1};
+        int[] valsB = {1, 2, 3, 4, 4, 3, 2, 1};
+
+        ListNode headA = makeList(valsA);
+        ListNode headB = makeList(valsB);
+
+        System.out.println("Printing list A");
+        System.out.println(listNodeToString(headA));
+
+        System.out.println("Printing list B");
+        System.out.println(listNodeToString(headB));
+
+        if (!(PalindromicLinkedList.Solution(headA) && PalindromicLinkedList.Solution(headB))) {
+            return false;
+        }
+
+        System.out.println("Both lists are palindrome");
         return true;
     }
 
