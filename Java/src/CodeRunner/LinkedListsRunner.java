@@ -10,6 +10,8 @@ public class LinkedListsRunner {
 
         // System.out.println(testFlattenMultiLevelList());
 
+        System.out.println(testLinkedListIntersection());
+
         // System.out.println(testLRUCache());
 
     }
@@ -57,6 +59,33 @@ public class LinkedListsRunner {
         // print the flattened list
         System.out.println(multiLevelListNodeToString(flattened));
 
+        return true;
+    }
+
+    private static boolean testLinkedListIntersection() {
+        int[] valsA1 = {1, 2};
+        int[] valsB1 = {6};
+        int[] valsCommon1 = {3, 4, 5};
+
+        ListNode headA1 = makeList(valsA1);
+        ListNode headB1 = makeList(valsB1);
+        ListNode common1 = makeList(valsCommon1);
+
+        // Attach common part
+        getNodeAt(headA1, valsA1.length - 1).next = common1;
+        headB1.next = common1;
+
+        System.out.println("Printing lists");
+        System.out.println(listNodeToString(headA1));
+        System.out.println(listNodeToString(headB1));
+
+        ListNode intersection1 = LinkedListIntersection.Solution(headA1, headB1);
+
+        if (intersection1 == null || intersection1.val != 3) {
+            return false;
+        }
+
+        System.out.println("Intersection at node with value: " + intersection1.val);
         return true;
     }
 
@@ -160,5 +189,46 @@ public class LinkedListsRunner {
         sb.append(" -> null"); // Indicate the end of the list
         return sb.toString();
     }
+
+    // toString for List
+    public static String listNodeToString(ListNode head) {
+        if (head == null) {
+            return "null";
+        }
+
+        StringBuilder sb = new StringBuilder();
+        ListNode cur = head;
+        while (cur != null) {
+            sb.append(cur.val).append(" -> ");
+            cur = cur.next;
+        }
+        sb.append("null");
+        return sb.toString();
+    }
+
+    // Helper for make linked list
+    public static ListNode makeList(int[] list) {
+        ListNode dummy = new ListNode(-1);
+        ListNode cur = dummy;
+
+        for (int value : list) {
+            cur.next = new ListNode(value);
+            cur = cur.next;
+        }
+
+        return dummy.next;
+    }
+
+    // Helper method to get a reference to the node at a specific index (0-based)
+    public static ListNode getNodeAt(ListNode head, int index) {
+        ListNode current = head;
+        int count = 0;
+        while(current != null && count < index) {
+            current = current.next;
+            count++;
+        }
+        return current;
+    }
+
 
 }
