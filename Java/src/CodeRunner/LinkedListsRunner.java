@@ -10,7 +10,11 @@ public class LinkedListsRunner {
 
         // System.out.println(testFlattenMultiLevelList());
 
-        System.out.println(testLinkedListIntersection());
+        // System.out.println(testLinkedListIntersection());
+
+        // System.out.println(testLinkedListReversal());
+
+        // System.out.println(testLinkedListReversalRecursive());
 
         // System.out.println(testLRUCache());
 
@@ -86,6 +90,46 @@ public class LinkedListsRunner {
         }
 
         System.out.println("Intersection at node with value: " + intersection1.val);
+        return true;
+    }
+
+    private static boolean testLinkedListReversal() {
+        int[] valsA = {1, 2, 3, 4, 5};
+        int[] valsAR = {5, 4, 3, 2, 1};
+
+        ListNode headA = makeList(valsA);
+
+        System.out.println("Printing lists");
+        System.out.println(listNodeToString(headA));
+
+        ListNode reversed = LinkedListReversal.Solution(headA);
+
+        if (!verifyLinkedList(reversed, valsAR)) {
+            return false;
+        }
+
+        System.out.println("Reversal of solution");
+        System.out.println(listNodeToString(reversed));
+        return true;
+    }
+
+    private static boolean testLinkedListReversalRecursive() {
+        int[] valsA = {1, 2, 3, 4, 5};
+        int[] valsAR = {5, 4, 3, 2, 1};
+
+        ListNode headA = makeList(valsA);
+
+        System.out.println("Printing lists");
+        System.out.println(listNodeToString(headA));
+
+        ListNode reversed = LinkedListReversalRecursive.Solution(headA);
+
+        if (!verifyLinkedList(reversed, valsAR)) {
+            return false;
+        }
+
+        System.out.println("Reversal of solution");
+        System.out.println(listNodeToString(reversed));
         return true;
     }
 
@@ -230,5 +274,17 @@ public class LinkedListsRunner {
         return current;
     }
 
-
+    // Helper method to compare linked list against fixed values
+    public static boolean verifyLinkedList(ListNode head, int[] expected) {
+        ListNode current = head;
+        int index = 0;
+        while (current != null && index < expected.length) {
+            if (current.val != expected[index]) {
+                return false;
+            }
+            current = current.next;
+            index++;
+        }
+        return current == null && index == expected.length;
+    }
 }
