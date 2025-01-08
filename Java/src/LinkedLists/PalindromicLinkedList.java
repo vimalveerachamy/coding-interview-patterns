@@ -17,7 +17,7 @@ import DS.ListNode;
 
 
 public class PalindromicLinkedList {
-    public static boolean Solution(ListNode head) {
+    public static boolean solution(ListNode head) {
         // Find the middle of the linked list and then reverse the second half of the
         // linked list starting at this midpoint.
         ListNode mid = findMiddle(head);

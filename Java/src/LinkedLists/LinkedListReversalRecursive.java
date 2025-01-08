@@ -17,7 +17,7 @@ import DS.ListNode;
 
 
 public class LinkedListReversalRecursive {
-    public static ListNode Solution(ListNode head) {
+    public static ListNode solution(ListNode head) {
         // Base cases.
         if (head == null || head.next == null) return head;
         else {

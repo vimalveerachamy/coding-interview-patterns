@@ -51,7 +51,7 @@ public class LinkedListsRunner {
         node7.next = node8;
 
         System.out.println(multiLevelListNodeToString(node1));
-        MultiLevelListNode flattened = FlattenMultiLevelList.Solution(node1);
+        MultiLevelListNode flattened = FlattenMultiLevelList.solution(node1);
 
         // 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> null
         int counter = 1;
@@ -87,7 +87,7 @@ public class LinkedListsRunner {
         System.out.println(listNodeToString(headA1));
         System.out.println(listNodeToString(headB1));
 
-        ListNode intersection1 = LinkedListIntersection.Solution(headA1, headB1);
+        ListNode intersection1 = LinkedListIntersection.solution(headA1, headB1);
 
         if (intersection1 == null || intersection1.val != 3) {
             return false;
@@ -106,7 +106,7 @@ public class LinkedListsRunner {
         System.out.println("Printing lists");
         System.out.println(listNodeToString(headA));
 
-        ListNode reversed = LinkedListReversal.Solution(headA);
+        ListNode reversed = LinkedListReversal.solution(headA);
 
         if (!verifyLinkedList(reversed, valsAR)) {
             return false;
@@ -126,7 +126,7 @@ public class LinkedListsRunner {
         System.out.println("Printing lists");
         System.out.println(listNodeToString(headA));
 
-        ListNode reversed = LinkedListReversalRecursive.Solution(headA);
+        ListNode reversed = LinkedListReversalRecursive.solution(headA);
 
         if (!verifyLinkedList(reversed, valsAR)) {
             return false;
@@ -150,7 +150,7 @@ public class LinkedListsRunner {
         System.out.println("Printing list B");
         System.out.println(listNodeToString(headB));
 
-        if (!(PalindromicLinkedList.Solution(headA) && PalindromicLinkedList.Solution(headB))) {
+        if (!(PalindromicLinkedList.solution(headA) && PalindromicLinkedList.solution(headB))) {
             return false;
         }
 
@@ -165,7 +165,7 @@ public class LinkedListsRunner {
         System.out.println("Printing list A before");
         System.out.println(listNodeToString(headA));
 
-        headA = RemoveKthLastNode.Solution(headA, k);
+        headA = RemoveKthLastNode.solution(headA, k);
 
         if (!verifyLinkedList(headA, new int[] {1, 2, 4, 5})) {
             return false;

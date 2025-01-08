@@ -17,7 +17,7 @@ import DS.ListNode;
 
 
 public class LinkedListReversal {
-    public static ListNode Solution(ListNode head) {
+    public static ListNode solution(ListNode head) {
         ListNode currNode = head;
         ListNode prevNode = null;
         // Reverse the direction of each node's pointer until 'currNode'

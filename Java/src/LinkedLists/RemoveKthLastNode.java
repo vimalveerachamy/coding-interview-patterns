@@ -17,7 +17,7 @@ import DS.ListNode;
 
 
 public class RemoveKthLastNode {
-    public static ListNode Solution(ListNode head, int k) {
+    public static ListNode solution(ListNode head, int k) {
         // A dummy node to ensure there's a node before 'head' in case we
         // need to remove the head node.
         ListNode dummy = new ListNode(-1);

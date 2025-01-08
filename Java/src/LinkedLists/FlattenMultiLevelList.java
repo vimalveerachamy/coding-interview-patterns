@@ -19,7 +19,7 @@ import DS.MultiLevelListNode;
 
 
 public class FlattenMultiLevelList {
-    public static MultiLevelListNode Solution(MultiLevelListNode head) {
+    public static MultiLevelListNode solution(MultiLevelListNode head) {
         if (head == null) {
             return null;
         }

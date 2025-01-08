@@ -17,7 +17,7 @@ import DS.ListNode;
 
 
 public class LinkedListIntersection {
-    public static ListNode Solution(ListNode headA, ListNode headB) {
+    public static ListNode solution(ListNode headA, ListNode headB) {
         ListNode ptrA = headA;
         ListNode ptrB = headB;
         // Traverse through list A with 'ptrA' and list B with 'ptrB'
