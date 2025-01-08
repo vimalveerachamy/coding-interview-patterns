@@ -1,10 +1,8 @@
-package LinkedLists;
-
 import DS.ListNode;
 
 /*
     // Definition of ListNode:
-    public class ListNode {
+    class ListNode {
         public int val;
         public ListNode next;
         public ListNode(int val) { this.val = val; }
@@ -17,7 +15,7 @@ import DS.ListNode;
 
 
 public class LinkedListIntersection {
-    public static ListNode solution(ListNode headA, ListNode headB) {
+    public static ListNode linkedListIntersection(ListNode headA, ListNode headB) {
         ListNode ptrA = headA;
         ListNode ptrB = headB;
         // Traverse through list A with 'ptrA' and list B with 'ptrB'

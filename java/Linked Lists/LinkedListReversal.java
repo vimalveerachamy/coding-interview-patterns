@@ -1,10 +1,8 @@
-package LinkedLists;
-
 import DS.ListNode;
 
 /*
     // Definition of ListNode:
-    public class ListNode {
+    class ListNode {
         public int val;
         public ListNode next;
         public ListNode(int val) { this.val = val; }
@@ -17,7 +15,7 @@ import DS.ListNode;
 
 
 public class LinkedListReversal {
-    public static ListNode solution(ListNode head) {
+    public static ListNode linkedListReversal(ListNode head) {
         ListNode currNode = head;
         ListNode prevNode = null;
         // Reverse the direction of each node's pointer until 'currNode'

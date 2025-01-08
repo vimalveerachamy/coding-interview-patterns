@@ -1,10 +1,8 @@
-package LinkedLists;
-
 import DS.MultiLevelListNode;
 
 /*
     // Definition of MultiLevelListNode:
-    public class MultiLevelListNode {
+    class MultiLevelListNode {
         public int val;
         public MultiLevelListNode next;
         public MultiLevelListNode child;
@@ -19,7 +17,7 @@ import DS.MultiLevelListNode;
 
 
 public class FlattenMultiLevelList {
-    public static MultiLevelListNode solution(MultiLevelListNode head) {
+    public static MultiLevelListNode flattenMultiLevelList(MultiLevelListNode head) {
         if (head == null) {
             return null;
         }

@@ -1,10 +1,8 @@
-package LinkedLists;
-
 import DS.ListNode;
 
 /*
     // Definition of ListNode:
-    public class ListNode {
+    class ListNode {
         public int val;
         public ListNode next;
         public ListNode(int val) { this.val = val; }
@@ -17,7 +15,7 @@ import DS.ListNode;
 
 
 public class RemoveKthLastNode {
-    public static ListNode solution(ListNode head, int k) {
+    public static ListNode removeKthLastNode(ListNode head, int k) {
         // A dummy node to ensure there's a node before 'head' in case we
         // need to remove the head node.
         ListNode dummy = new ListNode(-1);

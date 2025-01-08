@@ -1,10 +1,8 @@
-package LinkedLists;
-
 import DS.ListNode;
 
 /*
     // Definition of ListNode:
-    public class ListNode {
+    class ListNode {
         public int val;
         public ListNode next;
         public ListNode(int val) { this.val = val; }
@@ -17,7 +15,7 @@ import DS.ListNode;
 
 
 public class PalindromicLinkedList {
-    public static boolean solution(ListNode head) {
+    public static boolean palindromicLinkedList(ListNode head) {
         // Find the middle of the linked list and then reverse the second half of the
         // linked list starting at this midpoint.
         ListNode mid = findMiddle(head);
