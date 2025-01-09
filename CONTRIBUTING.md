@@ -10,7 +10,7 @@ We’re excited to have you contribute to this repository, and your efforts will
 
 4. Always **create a new branch** for your additions or changes. We recommend creating separate branches for each chapter you’re contributing. Example: `git checkout -b java-solutions-linked-lists`.
 
-5. Stay true to existing variable/function naming, code comments and algorithm structure. Feel free to add additional comments for clarity, especially if any language-specific nuances are included.
+5. Stay true to existing variable/function naming, code comments and algorithm structure. If imports are necessary for the code to run, include them. Don't wrap the code around a class unless it's mandatory for the language, or the problem necessitates a class. Feel free to add additional comments for clarity, especially if any language-specific nuances are included. 
 
 6. **Test your code**. Be sure your code runs. We're currently working on making all test cases public. In the mean time, please use your own set of diverse test cases.
 
