@@ -10,7 +10,7 @@
 // Function prototypes
 ListNode* findMiddle(ListNode* head);
 ListNode* reverseList(ListNode* head);
-bool isPalindrome(ListNode* head);
+bool palindromicLinkedList(ListNode* head);
 
 bool palindromicLinkedList(ListNode* head) {
     // Find the middle of the linked list and then reverse the second half of the
