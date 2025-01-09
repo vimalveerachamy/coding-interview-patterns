@@ -1,8 +1,6 @@
-package common.twopointers.ispalindrome
-
 class IsPalindromeValid {
 
-    fun solution(s: String): Boolean {
+    fun isPalindromeValid(s: String): Boolean {
         var left = 0
         var right = s.length - 1
         while (left < right) {

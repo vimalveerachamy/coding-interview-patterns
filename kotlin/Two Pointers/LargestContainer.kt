@@ -1,11 +1,6 @@
-package common.twopointers.largestcontainer
-
-import kotlin.math.max
-import kotlin.math.min
-
 class LargestContainer {
 
-    fun solution(heights: List<Int>): Int {
+    fun largestContainer(heights: List<Int>): Int {
         var maxWater = 0
         var left = 0
         var right = heights.size - 1

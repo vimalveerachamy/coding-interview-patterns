@@ -1,8 +1,6 @@
-package common.twopointers.tripletsum
-
 class TripletSumBruteForce {
 
-    fun solution(nums: List<Int>): List<List<Int>> {
+    fun tripletSumBruteForce(nums: List<Int>): List<List<Int>> {
         // Use a hash set to ensure we don't add duplicate triplets.
         val triplets = hashSetOf<List<Int>>()
         // Iterate through the indexes of all triplets. O(n^3)

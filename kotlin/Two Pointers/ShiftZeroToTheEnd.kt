@@ -1,8 +1,6 @@
-package common.twopointers.shiftzero
-
 class ShiftZeroToTheEnd {
 
-    fun solution(nums: IntArray) {
+    fun shiftZerosToTheEnd(nums: IntArray) {
         // The 'left' pointer is used to position non-zero elements.
         var left = 0
         // Iterate through the array using a 'right' pointer to locate non-zero

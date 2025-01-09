@@ -1,8 +1,6 @@
-package common.twopointers.pairsumsorted
-
 class PairSumSortedBruteForce {
 
-    fun solution(nums: IntArray, target: Int): List<Int> {
+    fun pairSumSortedBruteForce(nums: IntArray, target: Int): List<Int> {
         val n = nums.size
         for (i in 0 until n) {
             for (j in i + 1 until nums.size) {

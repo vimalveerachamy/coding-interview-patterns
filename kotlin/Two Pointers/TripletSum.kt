@@ -1,8 +1,6 @@
-package common.twopointers.tripletsum
-
 class TripletSum() {
 
-    fun solution(nums: List<Int>): List<List<Int>> {
+    fun tripletSum(nums: List<Int>): List<List<Int>> {
         val triplets = mutableListOf<List<Int>>()
         val sortedNums = nums.sorted()
         for (i in sortedNums.indices) {

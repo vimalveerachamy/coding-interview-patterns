@@ -1,11 +1,6 @@
-package common.twopointers.largestcontainer
-
-import kotlin.math.max
-import kotlin.math.min
-
 class LargestContainerBruteForce {
 
-    fun solution(heights: List<Int>): Int {
+    fun largestContainerBruteForce(heights: List<Int>): Int {
         val n = heights.size
         var maxWater = 0
         // Find the maximum amount of water stored between all pairs of lines.

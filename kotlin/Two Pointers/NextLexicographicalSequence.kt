@@ -1,8 +1,6 @@
-package common.twopointers.nextlexicographicalsequence
-
 class NextLexicographicalSequence {
 
-    fun solution(s: String): String {
+    fun nextLexicographicalSequence(s: String): String {
         val letters = s.toCharArray()
 
         // Locate the pivot, which is the first character from the right that breaks
