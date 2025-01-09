@@ -25,6 +25,20 @@ public:
         head->next = tail;
         tail->prev = head;
     }
+    // Destructor: Cleans up dynamically allocated resources 
+    // to prevent memory leaks. Implemented if time permits 
+    // during an interview.
+    ~LRUCache() {
+        // Delete all nodes in the linked list. 
+        DoublyLinkedListNode* current = head;
+        while (current != nullptr) {
+            DoublyLinkedListNode* nextNode = current->next;
+            delete current;
+            current = nextNode;
+        }
+        // Clear the hashmap. 
+        hashmap.clear();
+    }
 
     int get(int key) {
         if (hashmap.find(key) == hashmap.end()) {
@@ -41,15 +55,20 @@ public:
         // If a node with this key already exists, remove it from the 
         // linked list.
         if (hashmap.find(key) != hashmap.end()) {
-            removeNode(hashmap[key]);
+            DoublyLinkedListNode* existingNode = hashmap[key];
+            removeNode(existingNode);
+            delete existingNode;
+            hashmap.erase(key);
         }
         DoublyLinkedListNode* node = new DoublyLinkedListNode(key, val);
         hashmap[key] = node;
         // Remove the least recently used node from the cache if adding 
         // this new node will result in an overflow.
         if (hashmap.size() > capacity) {
-            hashmap.erase(head->next->key);
-            removeNode(head->next);
+            DoublyLinkedListNode* lruNode = head->next;
+            hashmap.erase(lruNode->key);
+            removeNode(lruNode);
+            delete lruNode;
         }
         addToTail(node);
     }
