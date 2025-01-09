@@ -1,5 +1,3 @@
-package twopointers;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -47,40 +45,4 @@ public class TripletSum {
         }
         return pairs;
     }
-
-    public static void main(String[] args) {
-        System.out.println("Tests an empty array.\n" +
-                " Input: nums=[]\n" +
-                " Expected output: []\n" +
-                " Actual output: " + new TripletSum().tripletSum(new int[]{}));
-
-        System.out.println("Tests a single-element array.\n" +
-                " Input: nums=[0]\n" +
-                " Expected output: []\n" +
-                " Actual output: " + new TripletSum().tripletSum(new int[]{0}));
-
-        System.out.println("Tests a two-element array.\n" +
-                " Input: nums=[1, -1]\n" +
-                " Expected output: []\n" +
-                " Actual output: " + new TripletSum().tripletSum(new int[]{1, -1}));
-
-        System.out.println("Tests an array where all three of its values are the same.\n" +
-                " Input: nums=[0, 0, 0]\n" +
-                " Expected output: [[0, 0, 0]]\n" +
-                " Actual output: " + new TripletSum().tripletSum(new int[]{0, 0, 0}));
-
-        System.out.println("Tests an array with no triplets that sum to 0.\n" +
-                " Input: nums=[1, 0, 1]\n" +
-                " Expected output: []\n" +
-                " Actual output: " + new TripletSum().tripletSum(new int[]{1, 0, 1}));
-
-        System.out.println("Tests an array with duplicate triplets.\n" +
-                " Input: nums=[0, 0, 1, -1, 1, -1]\n" +
-                " Expected output: [[-1, 0, 1]]\n" +
-                " Actual output: " + new TripletSum().tripletSum(new int[]{0, 0, 1, -1, 1, -1}));
-
-        System.out.println("Tests an array with multiple triplets.\n" +
-                " Input: nums=[-1, 0, 1, 2, -1, -4]\n" +
-                " Expected output: [[-1, -1, 2], [-1, 0, 1]]\n" +
-                " Actual output: " + new TripletSum().tripletSum(new int[]{-1, 0, 1, 2, -1, -4}));   }
 }
