@@ -13,7 +13,7 @@ ListNode* linkedListReversalRecursive(ListNode* head) {
         return head;
     }
     // Recursively reverse the sublist starting from the next node.
-    ListNode* newHead = LinkedListReversalRecursive(head->next);
+    ListNode* newHead = linkedListReversalRecursive(head->next);
     // Connect the reversed linked list to the head node to fully
     // reverse the entire linked list.
     head->next->next = head; 
