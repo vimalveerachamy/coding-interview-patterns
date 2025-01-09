@@ -10,19 +10,19 @@ class LargestContainer {
         var left = 0
         var right = heights.size - 1
         while (left < right) {
-            // Select minimum among them. Water can be contained depending on lower height.
-            val width = min(heights[left], heights[right])
-            val length = right - left
-            // Rectangle formula.
-            // Calculate the water contained between the current pair of lines.
-            val water = width * length
+            // Calculate the water contained between the current pair of
+            // lines.
+            val water = min(heights[left], heights[right]) * (right - left)
             maxWater = max(maxWater, water)
-
-            // Move the pointers inward, always moving the pointer at the shorter line.
-            // Otherwise, just move the right side.
+            // Move the pointers inward, always moving the pointer at the
+            // shorter line. If both lines have the same height, move both
+            // pointers inward.
             if (heights[left] < heights[right]) {
                 left++
+            } else if (heights[left] > heights[right]) {
+                right--
             } else {
+                left++
                 right--
             }
         }
