@@ -3,18 +3,15 @@ package common.twopointers.largestcontainer
 import kotlin.math.max
 import kotlin.math.min
 
-class LargestContainerNaive {
+class LargestContainerBruteForce {
 
     fun solution(heights: List<Int>): Int {
+        val n = heights.size
         var maxWater = 0
         // Find the maximum amount of water stored between all pairs of lines.
-        for (i in heights.indices) {
+        for (i in 0 until n) {
             for (j in i + 1 until heights.size) {
-                // Select minimum among them. Water can be contained depending on lower height.
-                val width = min(heights[i], heights[j])
-                val length = j - i
-                // Rectangle formula.
-                val water = width * length
+                val water = min(heights[i], heights[j]) * (j - i)
                 maxWater = max(maxWater, water)
             }
         }

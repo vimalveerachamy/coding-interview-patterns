@@ -3,9 +3,9 @@ package common.twopointers.largestcontainer
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class LargestContainerNaiveTest {
+class LargestContainerBruteForceTest {
 
-    private val question = LargestContainerNaive()
+    private val question = LargestContainerBruteForce()
 
     @Test
     fun `Verify solution`() {
