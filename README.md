@@ -12,7 +12,7 @@ going to reinforce your learning, and better prepare you for high‐stakes codin
 https://bit.ly/run-code
 
 ## Contributing to the Repo
-We welcome contributions to the repository! Of course, your contributions will be credited. If you’d like to add solutions in a language of your choice, or amend an existing solution in any language, please read the instructions provided in [Contribute.md](Contribute.md).
+We welcome contributions to the repository! Of course, your contributions will be credited. If you’d like to add solutions in a language of your choice, or amend an existing solution in any language, please read the instructions provided in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## 📙 About the Book
 
