@@ -1,6 +1,6 @@
 package common.twopointers.shiftzero
 
-class ShiftZeroNaive {
+class ShiftZeroToTheEndNaive {
 
     fun solution(nums: IntArray) {
         val temp = IntArray(nums.size)

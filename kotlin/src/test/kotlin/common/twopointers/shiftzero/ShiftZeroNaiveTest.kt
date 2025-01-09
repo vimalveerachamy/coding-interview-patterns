@@ -5,7 +5,7 @@ import kotlin.test.assertContentEquals
 
 class ShiftZeroNaiveTest {
 
-    private val question = ShiftZeroNaive()
+    private val question = ShiftZeroToTheEndNaive()
 
     @Test
     fun `Test naive solution`() {
