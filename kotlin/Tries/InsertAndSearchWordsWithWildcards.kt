@@ -1,11 +1,7 @@
-/*
-    Definition of a TrieNode:
-
-    data class TrieNode(
-        var isWord: Boolean = false,
-        val children: HashMap<Char, TrieNode> = hashMapOf()
-    )
-*/
+data class TrieNode(
+    var isWord: Boolean = false,
+    val children: HashMap<Char, TrieNode> = hashMapOf()
+)
 
 class InsertAndSearchWordsWithWildcards {
     private val root = TrieNode()
