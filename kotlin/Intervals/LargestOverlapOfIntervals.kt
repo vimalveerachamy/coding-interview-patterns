@@ -1,4 +1,9 @@
-data class Interval(var start: Int, var end: Int)
+import ds.Interval
+
+/*
+    Definition of Interval:
+    data class Interval(var start: Int, var end: Int)
+*/
 
 fun largestOverlapOfIntervals(intervals: List<Interval>): Int {
     val points = mutableListOf<Pair<Int, Char>>()

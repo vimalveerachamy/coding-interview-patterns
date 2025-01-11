@@ -1,4 +1,9 @@
-data class Interval(var start: Int, var end: Int)
+import ds.Interval
+
+/*
+    Definition of Interval:
+    data class Interval(var start: Int, var end: Int)
+*/
 
 fun identifyAllIntervalOverlaps(intervals1: List<Interval>, intervals2: List<Interval>): List<Interval> {
     val overlaps = mutableListOf<Interval>()
