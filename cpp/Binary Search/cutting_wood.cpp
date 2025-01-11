@@ -1,9 +1,6 @@
 #include <vector>
 #include <algorithm>
 
-// Function prototype
-bool cutsEnoughWood(int H, int k, std::vector<int>& heights);
-
 int cuttingWood(std::vector<int>& heights, int k) {
     int left = 0;
     int right = *std::max_element(heights.begin(), heights.end());

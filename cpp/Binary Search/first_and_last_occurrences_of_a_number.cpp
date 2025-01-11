@@ -1,9 +1,5 @@
 #include <vector>
 
-// Function prototypes
-int lowerBoundBinarySearch(std::vector<int>& nums, int target);
-int upperBoundBinarySearch(std::vector<int>& nums, int target);
-
 std::vector<int> firstAndLastOccurrencesOfANumber(std::vector<int>& nums, int target) {
     int lowerBound = lowerBoundBinarySearch(nums, target);
     int upperBound = upperBoundBinarySearch(nums, target);
