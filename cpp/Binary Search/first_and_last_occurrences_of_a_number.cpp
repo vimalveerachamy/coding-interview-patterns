@@ -7,7 +7,6 @@ std::vector<int> firstAndLastOccurrencesOfANumber(std::vector<int>& nums, int ta
 }
 
 int lowerBoundBinarySearch(std::vector<int>& nums, int target) {
-    if (nums.empty()) return -1;
     int left = 0, right = nums.size() - 1;
     while (left < right) {
         int mid = (left + right) / 2;
