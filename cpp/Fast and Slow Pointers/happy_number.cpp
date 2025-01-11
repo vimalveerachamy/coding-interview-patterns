@@ -1,7 +1,4 @@
-// Function prototype for getNextNum
-int getNextNum(int x);
-
-bool isHappyNumber(int n) {
+bool happyNumber(int n) {
     int slow = n;
     int fast = n;
     while (true) {
