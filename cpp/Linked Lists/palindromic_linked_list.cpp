@@ -1,3 +1,6 @@
+#include "ds/ListNode.h"
+using ds::ListNode;
+
 /**
  * Definition of ListNode:
  * struct ListNode {
