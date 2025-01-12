@@ -1,4 +1,6 @@
 #include <unordered_set>
+#include "ds/ListNode.h"
+using ds::ListNode;
 
 /**
  * Definition of ListNode:
