@@ -30,7 +30,7 @@ class LRUCache {
         // re-add it to the tail of the linked list.
         val node = hashmap[key]!!
         removeNode(node)
-        addNodeToTail(node)
+        addToTail(node)
         return node.value
     }
 
@@ -48,10 +48,10 @@ class LRUCache {
             hashmap.remove(head.next!!.key)
             removeNode(head.next!!)
         }
-        addNodeToTail(node)
+        addToTail(node)
     }
 
-    private fun addNodeToTail(node: DoublyLinkedListNode) {
+    private fun addToTail(node: DoublyLinkedListNode) {
         val prevNode = tail.prev
         node.prev = prevNode
         node.next = tail
