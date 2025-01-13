@@ -27,7 +27,7 @@ public class SortArrayQuicksortOptimized {
         for (int i = left; i < right; i++) {
             if (nums[i] < pivot) {
                 swap(nums, lo, i);
-                lo += 1;
+                lo++;
             }
         }
         // After partitioning, 'lo' will be positioned where the pivot should

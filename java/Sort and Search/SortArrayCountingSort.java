@@ -8,7 +8,7 @@ public class SortArrayCountingSort {
         // Count occurrences of each element in 'nums'.
         int[] counts = new int[max + 1];
         for (int num : nums) {
-            counts[num] += 1;
+            counts[num]++;
         }
         // Build the sorted array by appending each index 'i' to it a total 
         // of 'counts[i]' times.
