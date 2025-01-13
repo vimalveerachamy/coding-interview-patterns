@@ -1,3 +1,6 @@
+#include "ds/MultiLevelListNode.h"
+using ds::MultiLevelListNode;
+
 /**
  * Definition of MultiLevelListNode:
  * class MultiLevelListNode {

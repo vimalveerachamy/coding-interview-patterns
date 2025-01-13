@@ -1,3 +1,6 @@
+#include "ds/ListNode.h"
+using ds::ListNode;
+
 /**
  * Definition of ListNode:
  * struct ListNode {
@@ -6,11 +9,6 @@
  *     ListNode(int val = 0, ListNode* next = nullptr) : val(val), next(next) {}
  * };
  */
-
-// Function prototypes
-ListNode* findMiddle(ListNode* head);
-ListNode* reverseList(ListNode* head);
-bool palindromicLinkedList(ListNode* head);
 
 bool palindromicLinkedList(ListNode* head) {
     // Find the middle of the linked list and then reverse the second half of the
