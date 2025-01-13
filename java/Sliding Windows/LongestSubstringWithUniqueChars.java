@@ -15,7 +15,7 @@ public class LongestSubstringWithUniqueChars {
                 left++;
             }
             // Once there are no more duplicates in the window, update
-            // 'max_len' if the current window is larger.
+            // 'maxLen' if the current window is larger.
             maxLen = Math.max(maxLen, right - left + 1);
             hashSet.add(s.charAt(right));
             // Expand the window.
