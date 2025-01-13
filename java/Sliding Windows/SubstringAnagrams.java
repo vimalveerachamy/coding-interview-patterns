@@ -8,14 +8,14 @@ public class SubstringAnagrams {
         int[] windowFreqs = new int[26];
         // Populate 'expected_freqs' with the characters in string 't'.
         for (char c : t.toCharArray()) {
-            expectedFreqs[c - 'a'] += 1;
+            expectedFreqs[c - 'a']++;
         }
         int left, right;
         left = right = 0;
         while (right < lenS) {
             // Add the character at the right pointer to 'window_freqs' 
             // before sliding the window.
-            windowFreqs[s.charAt(right) - 'a'] += 1;
+            windowFreqs[s.charAt(right) - 'a']++;
             // If the window has reached the expected fixed length, we 
             // advance the left pointer as well as the right pointer to 
             // slide the window.
@@ -25,7 +25,7 @@ public class SubstringAnagrams {
                 }
                 // Remove the character at the left pointer from 
                 // 'window_freqs' before advancing the left pointer.
-                windowFreqs[s.charAt(left) - 'a'] -= 1;
+                windowFreqs[s.charAt(left) - 'a']--;
                 left += 1;
             }
             right += 1;
