@@ -17,7 +17,7 @@ public class WeightedRandomSelection {
         // Perform lower-bound binary search to find which endpoint (i.e., prefix 
         // sum value) corresponds to the target.
         while (left < right) {
-            int mid = (left + right) / 2;
+            int mid = left + (right - left) / 2;
             if (prefixSum[mid] < target) {
                 left = mid + 1;
             } else {

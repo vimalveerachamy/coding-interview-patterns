@@ -3,7 +3,7 @@ public class FindTheInsertionIndex {
         int left = 0;
         int right = nums.length;
         while (left < right) {
-            int mid = (left + right) / 2;
+            int mid = left + (right - left) / 2;
             // If the midpoint value is greater than or equal to the target, 
             // the lower bound is either at the midpoint, or to its left.
             if (nums[mid] >= target) {

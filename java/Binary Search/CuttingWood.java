@@ -7,7 +7,7 @@ public class CuttingWood {
         while (left < right) {
             // Bias the midpoint to the right during the upper-bound binary 
             // search.
-            int mid = (left + right) / 2 + 1;
+            int mid = left + (right - left) / 2 + 1;
             if (cutsEnoughWood(mid, k, heights)) {
                 left = mid;
             } else {
