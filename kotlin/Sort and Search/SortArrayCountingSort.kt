@@ -12,6 +12,5 @@ fun sortArrayCountingSort(nums: List<Int>): List<Int> {
         val count = counts[i]
         repeat(count) { res.add(i) }
     }
-    // counts.forEachIndexed { i, count -> repeat(count) { res.add(i) } }
     return res
 }
