@@ -22,7 +22,7 @@ public class ZeroStripingHashSets {
             }
         }
         // Pass 2: Set any cell in the matrix to zero if its row index is 
-        // in 'zero_rows' or its column index is in 'zero_cols'.
+        // in 'zeroRows' or its column index is in 'zeroCols'.
         for (int r = 0; r < m; r++) {
             for (int c = 0; c < n; c++) {
                 if (zeroRows.contains(r) || zeroCols.contains(c)) {
