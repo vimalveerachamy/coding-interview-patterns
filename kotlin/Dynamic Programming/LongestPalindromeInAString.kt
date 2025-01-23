@@ -1,4 +1,4 @@
-fun longestPalindromInAString(s: String): String {
+fun longestPalindromeInAString(s: String): String {
     val n = s.length
     if (n == 0) {
         return ""

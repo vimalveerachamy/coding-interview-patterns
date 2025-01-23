@@ -1,4 +1,4 @@
-fun climbingStairsBottmoUp(n: Int): Int {
+fun climbingStairsBottomUp(n: Int): Int {
     if (n <= 2) {
         return n
     }
