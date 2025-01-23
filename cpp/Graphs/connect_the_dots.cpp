@@ -14,8 +14,8 @@ public:
             parent[i] = i;
         }
     }
-    
-    bool unionSets(int x, int y) {
+
+    bool union_(int x, int y) {
         int repX = find(x);
         int repY = find(y);
         if (repX != repY) {
@@ -32,7 +32,7 @@ public:
         // Return false if the points belong to the same group.
         return false;
     }
-
+    
     int find(int x) {
         if (x == parent[x]) {
             return x;
@@ -64,7 +64,7 @@ int connectTheDots(std::vector<std::vector<int>>& points) {
         std::tie(cost, p1, p2) = edge;
         // If the points are not already connected (i.e. their representatives are
         // not the same), connect them, and add the cost to the total cost.
-        if (uf.unionSets(p1, p2)) {
+        if (uf.union_(p1, p2)) {
             totalCost += cost;
             edgesAdded++;
             // If n - 1 edges have been added, the MST is complete.
