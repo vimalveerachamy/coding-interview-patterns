@@ -13,9 +13,8 @@ public class KMostFrequentStringsMinHeap {
             this.str = str;
             this.freq = freq;
         }
-        // Since this is a min-heap comparator, we can use the same 
-        // comparator as the one used in the max-heap, but reversing the 
-        // inequality signs to invert the priority.
+        // Since this is a min-heap compareTo(), we can use the same 
+        // compareTo() as the one used in the max-heap.
         @Override
         public int compareTo(Pair other) {
             if (this.freq == other.freq) {
