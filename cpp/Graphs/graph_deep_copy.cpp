@@ -8,18 +8,10 @@ using ds::GraphNode;
  * class GraphNode {
  * public:
  *     int val;
- *     vector<GraphNode*> neighbors;
- *     GraphNode() {
- *         val = 0;
- *         neighbors = vector<GraphNode*>();
- *     }
+ *     std::vector<GraphNode*> neighbors;
  *     GraphNode(int _val) {
  *         val = _val;
  *         neighbors = vector<GraphNode*>();
- *     }
- *     GraphNode(int _val, vector<GraphNode*> _neighbors) {
- *         val = _val;
- *         neighbors = _neighbors;
  *     }
  * };
  */
