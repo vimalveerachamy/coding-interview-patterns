@@ -21,7 +21,7 @@ int shortestTransformationSequence(std::string& start, std::string& end, std::ve
     // start word to the end word.
     while (!queue.empty()) {
         int size = queue.size();
-        for (int unused = 0; unused < size; unused++) {
+        for (int i = 0; i < size; i++) {
             std::string currWord = queue.front();
             queue.pop_front();
             // If we found the end word, we've reached it via the 
@@ -31,10 +31,10 @@ int shortestTransformationSequence(std::string& start, std::string& end, std::ve
             }
             // Generate all possible words that have a one-letter difference 
             // to the current word.
-            for (int i = 0; i < currWord.length(); i++) {
+            for (int j = 0; j < currWord.length(); j++) {
                 for (char c : lowerCaseAlphabet) {
                     std::string nextWord = currWord;
-                    nextWord[i] = c;
+                    nextWord[j] = c;
                     // If 'nextWord' exists in the dictionary, it's a 
                     // neighbor of the current word. If unvisited, add it 
                     // to the queue to be processed in the next level.
