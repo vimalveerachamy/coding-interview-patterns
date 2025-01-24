@@ -1,13 +1,12 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.Stack;
 
 public class ImplementAQueueUsingAStack {
-    Deque<Integer> enqueueStack;
-    Deque<Integer> dequeueStack;
+    Stack<Integer> enqueueStack;
+    Stack<Integer> dequeueStack;
 
     public ImplementAQueueUsingAStack() {
-        this.enqueueStack = new ArrayDeque<>();
-        this.dequeueStack = new ArrayDeque<>();
+        this.enqueueStack = new Stack<>();
+        this.dequeueStack = new Stack<>();
     }
 
     public void enqueue(int x) {

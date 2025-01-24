@@ -1,10 +1,9 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.Stack;
 
 public class NextLargestNumberToTheRight {
     public int[] nextLargestNumberToTheRight(int[] nums) {
         int[] res = new int[nums.length];
-        Deque<Integer> stack = new ArrayDeque<>();
+        Stack<Integer> stack = new Stack<>();
         // Find the next largest number of each element, starting with the 
         // rightmost element.
         for (int i = nums.length - 1; i >= 0; i--) {

@@ -1,5 +1,3 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
@@ -7,7 +5,7 @@ import java.util.Stack;
 public class ValidParenthesisExpression {
     public boolean validParenthesisExpression(String s) {
         Map<Character, Character> parenthesesMap = new HashMap<>();
-        Deque<Character> stack = new ArrayDeque<>();
+        Stack<Character> stack = new Stack<>();
         parenthesesMap.put('(', ')');
         parenthesesMap.put('{', '}');
         parenthesesMap.put('[', ']');
