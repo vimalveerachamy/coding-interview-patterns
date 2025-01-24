@@ -16,8 +16,8 @@ public:
     }
     
     bool unionSets(int x, int y) {
-        int repX = find(x);
-        int repY = find(y);
+        int repX = findSet(x);
+        int repY = findSet(y);
         if (repX != repY) {
             if (size[repX] > size[repY]) {
                 parent[repY] = repX;
@@ -33,11 +33,11 @@ public:
         return false;
     }
 
-    int find(int x) {
+    int findSet(int x) {
         if (x == parent[x]) {
             return x;
         }
-        parent[x] = find(parent[x]);
+        parent[x] = findSet(parent[x]);
         return parent[x];
     }
 };

@@ -13,8 +13,8 @@ public:
     }
 
     void unionSets(int x, int y) {
-        int repX = find(x);
-        int repY = find(y);
+        int repX = findSet(x);
+        int repY = findSet(y);
         if (repX != repY) {
             // If 'repX' represents a larger community, connect 
             // 'repY's community to it.
@@ -29,17 +29,17 @@ public:
         }
     }
 
-    int find(int x) {
+    int findSet(int x) {
         if (x == parent[x]) {
             return x;
         }
         // Path compression.
-        parent[x] = find(parent[x]);
+        parent[x] = findSet(parent[x]);
         return parent[x];
     }
 
     int getSize(int x) {
-        return size[find(x)];
+        return size[findSet(x)];
     }
 };
 
