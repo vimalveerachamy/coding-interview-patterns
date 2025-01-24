@@ -14,7 +14,7 @@ https://bit.ly/run-code
 ## 🌟 Contributing to the Repo
 We welcome contributions to the repository! Of course, your contributions will be credited. If you’d like to add solutions in a language of your choice, or amend an existing solution in any language, please read the instructions provided in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Huge thanks and appreciation to everyone who has helped build this repository from the ground up:
+Huge thanks and appreciation to the following people who have helped build this repository from the ground up:
 
 - [@Destiny-02](https://github.com/Destiny-02): Reviews PRs, manages contributions, and ensures code quality and consistency.
 - [@ongshunping](https://github.com/ongshunping): Implemented C++ solutions for all chapters.
