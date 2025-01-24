@@ -17,7 +17,7 @@ We welcome contributions to the repository! Of course, your contributions will b
 Huge thanks and appreciation to everyone who has helped build this repository from the ground up:
 
 - [@Destiny-02](https://github.com/Destiny-02): Reviews PRs, manages contributions, and ensures code quality and consistency.
-- [ongshunping](https://github.com/ongshunping): Implemented C++ solutions for all chapters.
+- [@ongshunping](https://github.com/ongshunping): Implemented C++ solutions for all chapters.
 - [@marttp](https://github.com/marttp): Implemented Kotlin for all chapters.
 
 ## 📙 About the Book
