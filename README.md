@@ -10,9 +10,15 @@ The only way to truly excel in coding interviews is with consistent practice. We
 visiting our website to practice all 101 problems. Engaging with these problems on our platform is
 going to reinforce your learning, and better prepare you for high‐stakes coding interviews:\
 https://bit.ly/run-code
-
+ 
 ## Contributing to the Repo
 We welcome contributions to the repository! Of course, your contributions will be credited. If you’d like to add solutions in a language of your choice, or amend an existing solution in any language, please read the instructions provided in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Huge thanks and appreciation to everyone who has helped build this repository from the ground up:
+
+- [@Destiny-02](https://github.com/Destiny-02): Reviews PRs, manages contributions, and ensures code quality and consistency.
+- [@username3](https://github.com/ongshunping): Implemented C++ solutions for all chapters.
+- [@username2](https://github.com/marttp): Implemented Kotlin for all chapters.
 
 ## 📙 About the Book
 
