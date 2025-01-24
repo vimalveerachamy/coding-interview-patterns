@@ -12,7 +12,7 @@ public:
         }
     }
 
-    void union_(int x, int y) {
+    void unionSets(int x, int y) {
         int repX = find(x);
         int repY = find(y);
         if (repX != repY) {
@@ -49,7 +49,7 @@ public:
     MergingCommunities(int n) : uf(n) {}
 
     void connect(int x, int y) {
-        uf.union_(x, y);
+        uf.unionSets(x, y);
     }
     
     int getCommunitySize(int x) {
