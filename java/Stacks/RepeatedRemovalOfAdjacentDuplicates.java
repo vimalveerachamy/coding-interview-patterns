@@ -1,9 +1,8 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.Stack;
 
 public class RepeatedRemovalOfAdjacentDuplicates {
     public String repeatedRemovalOfAdjacentDuplicates(String s) {
-        Deque<Character> stack = new ArrayDeque<>();
+        Stack<Character> stack = new Stack<>();
         StringBuilder res = new StringBuilder();
         for (char c : s.toCharArray()) {
             // If the current character is the same as the top character on the stack,
@@ -19,7 +18,7 @@ public class RepeatedRemovalOfAdjacentDuplicates {
         }
         // Return the remaining characters as a string.
         for (char c : stack) {
-            res.insert(0, c);
+            res.append(c);
         }
         return res.toString();
     }

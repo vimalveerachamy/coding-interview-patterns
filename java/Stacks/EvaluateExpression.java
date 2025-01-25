@@ -1,9 +1,8 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.Stack;
 
 public class EvaluateExpression {
     public int evaluateExpression(String s) {
-        Deque<Integer> stack = new ArrayDeque<>();
+        Stack<Integer> stack = new Stack<>();  
         int currNum = 0;
         int sign = 1;
         int res = 0;
