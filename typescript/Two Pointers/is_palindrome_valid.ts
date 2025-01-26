@@ -17,6 +17,4 @@ function is_palindrome_valid(s: string): boolean {
     return true
 }
 
-const isalnum = (c: string): boolean => /^[a-z0-9]+$/i.test(c)
-
-module.exports = { is_palindrome_valid };
+const isalnum = (c: string): boolean => /^[a-z0-9]+$/i.test(c);
