@@ -1,4 +1,4 @@
-export function pair_sum_sorted(nums: number[], target: number): number[] {
+function pair_sum_sorted(nums: number[], target: number): number[] {
     let left = 0, right = nums.length - 1
     while (left < right) {
         let sum = nums[left] + nums[right]
@@ -16,3 +16,5 @@ export function pair_sum_sorted(nums: number[], target: number): number[] {
     }
     return []
 }
+
+module.exports = {pair_sum_sorted}

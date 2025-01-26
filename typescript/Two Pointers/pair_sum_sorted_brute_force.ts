@@ -1,4 +1,4 @@
-export function pair_sum_sorted_brute_force(nums: number[], target: number): number[] {
+function pair_sum_sorted_brute_force(nums: number[], target: number): number[] {
     const n = nums.length;
     for (let i = 0; i < n; i++) {
         for (let j = i + 1; j < n; j++) {
@@ -8,3 +8,5 @@ export function pair_sum_sorted_brute_force(nums: number[], target: number): num
     }
     return []
 }
+
+module.exports = {pair_sum_sorted_brute_force}
