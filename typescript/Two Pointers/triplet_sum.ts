@@ -39,5 +39,3 @@ function pair_sum_sorted_all_pairs(nums: number[], start: number, target: number
     }
     return pairs
 }
-
-module.exports = { triplet_sum }
