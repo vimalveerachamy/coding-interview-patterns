@@ -8,5 +8,3 @@ function pair_sum_sorted_brute_force(nums: number[], target: number): number[] {
     }
     return []
 }
-
-module.exports = {pair_sum_sorted_brute_force}
