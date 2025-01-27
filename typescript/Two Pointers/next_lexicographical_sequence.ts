@@ -20,6 +20,4 @@ function next_lexicographical_sequence(s: string): string {
     const suffix = letters.slice(pivot + 1).reverse();
     letters.splice(pivot + 1, suffix.length, ...suffix);
     return letters.join('');
-}
-
-module.exports = { next_lexicographical_sequence }
+} 
