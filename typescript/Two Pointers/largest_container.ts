@@ -18,5 +18,3 @@ function largest_container(heights: number[]): number {
     }
     return max_water
 }
-
-module.exports = { largest_container }
