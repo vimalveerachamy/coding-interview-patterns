@@ -18,5 +18,3 @@ function triplet_sum_brute_force(nums: number[]): number[][] {
     // [javascript] convert the Set back into an array of triplets.
     return Array.from(triplets).map(JSON.parse)
 }
-
-module.exports = { triplet_sum_brute_force }
