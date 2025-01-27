@@ -16,5 +16,3 @@ function pair_sum_sorted(nums: number[], target: number): number[] {
     }
     return []
 }
-
-module.exports = {pair_sum_sorted}
