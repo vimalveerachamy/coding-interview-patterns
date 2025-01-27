@@ -13,5 +13,3 @@ function shift_zeros_to_the_end_naive(nums: number[]): void {
         nums[j] = temp[j]
     }
 }
-
-module.exports = { shift_zeros_to_the_end_naive }
