@@ -11,5 +11,3 @@ function largest_container_brute_force(heights: number[]): number {
     }
     return max_water
 }
-
-module.exports = { largest_container_brute_force }
