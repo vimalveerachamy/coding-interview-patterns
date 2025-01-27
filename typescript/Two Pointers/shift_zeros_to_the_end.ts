@@ -12,5 +12,3 @@ function shift_zeros_to_the_end(nums: number[]): void {
         }
     }
 }
-
-module.exports = { shift_zeros_to_the_end }
