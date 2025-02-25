@@ -1,7 +1,3 @@
-func isAlnum(r rune) bool {
-	return unicode.IsLetter(r) || unicode.IsDigit(r)
-}
-
 func isPalindromeValid(input string) bool {
 	s := []rune(input)
 
@@ -27,4 +23,8 @@ func isPalindromeValid(input string) bool {
 	}
 
 	return true
+}
+
+func isAlnum(r rune) bool {
+	return unicode.IsLetter(r) || unicode.IsDigit(r)
 }

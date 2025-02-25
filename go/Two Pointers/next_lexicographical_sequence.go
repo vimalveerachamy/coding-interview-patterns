@@ -1,12 +1,3 @@
-func reverse(s []rune, start int) {
-	end := len(s) - 1
-	for start < end {
-		s[start], s[end] = s[end], s[start]
-		start++
-		end--
-	}
-}
-
 func nextLexicographicalSequence(s string) string {
 	letters := []rune(s)
 	// Locate the pivot, which is the first character from the right that breaks
@@ -32,4 +23,13 @@ func nextLexicographicalSequence(s string) string {
 	// Reverse the suffix after the pivot to minimize its permutation.
 	reverse(letters, pivot+1)
 	return string(letters)
+}
+
+func reverse(s []rune, start int) {
+	end := len(s) - 1
+	for start < end {
+		s[start], s[end] = s[end], s[start]
+		start++
+		end--
+	}
 }

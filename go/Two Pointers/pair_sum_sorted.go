@@ -15,5 +15,5 @@ func pairSumSorted(nums []int, target int) []int {
 			return []int{left, right}
 		}
 	}
-	return []int{}
+	return nil
 }
