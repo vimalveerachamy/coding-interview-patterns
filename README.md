@@ -22,7 +22,7 @@ Huge thanks and appreciation to the following people who have helped build this 
 
 ## 📙 About the Book
 
-Coding interviews are tough, and they're only getting tougher, typically demanding months of preparation. What we all want is a way to master algorithms and data structures without having to spend countless hours sifting through endless, unfocussed resources. Introducing "Coding Interview Patterns," your complete guide to mastering the key patterns needed to ace your next coding interview.<br />
+Coding interviews are tough, and they're only getting tougher, typically demanding months of preparation. What we all want is a way to master algorithms and data structures without needing to spend countless hours sifting through endless, unfocussed resources. Introducing "Coding Interview Patterns," your complete guide to mastering the key patterns needed to ace your next coding interview.<br />
 
 ### What’s inside?
 - An insider’s perspective on what interviewers are truly looking for and why.
