@@ -1,4 +1,22 @@
-﻿public class Solution
+using ds.ListNode;
+
+/*
+	Definition of ListNode:
+	class ListNode
+	{
+		public ListNode(int val, ListNode next = null)
+		{
+			Val = val;
+			Next = next;
+		}
+
+		public int Val { get; set; }
+
+		public ListNode Next { get; set; }
+	}
+*/
+
+public class Solution
 {
 	public ListNode LinkedListIntersection(ListNode headA, ListNode headB)
 	{
