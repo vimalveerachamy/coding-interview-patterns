@@ -14,21 +14,7 @@
         _enqueueStack.Push(x);
     }
 
-    public int? Dequeue()
-    {
-        transferEnqueueToDequeue();
-
-        // Pop and return the value at the top of the dequeue stack.
-        return _dequeueStack.Count > 0 ? _dequeueStack.Pop() : null;
-    }
-
-    public int? Peek()
-    {
-        transferEnqueueToDequeue();
-        return _dequeueStack.Count > 0 ? _dequeueStack.Peek() : null;
-    }
-
-    public void transferEnqueueToDequeue()
+    private void TransferEnqueueToDequeue()
     {
         // If the dequeue stack is empty, push all elements from the enqueue stack
         // onto the dequeue stack. This ensures the top of the dequeue stack
@@ -38,5 +24,19 @@
             while (_enqueueStack.Count > 0)
                 _dequeueStack.Push(_enqueueStack.Pop());
         }
+    }
+
+    public int? Dequeue()
+    {
+        TransferEnqueueToDequeue();
+
+        // Pop and return the value at the top of the dequeue stack.
+        return _dequeueStack.Count > 0 ? _dequeueStack.Pop() : null;
+    }
+
+    public int? Peek()
+    {
+        TransferEnqueueToDequeue();
+        return _dequeueStack.Count > 0 ? _dequeueStack.Peek() : null;
     }
 }
