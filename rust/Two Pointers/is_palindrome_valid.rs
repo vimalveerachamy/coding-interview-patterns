@@ -13,7 +13,7 @@ fn is_palindrome_valid(s: &str) -> bool {
         }
         // If the characters at the left and right pointers don't
         // match, the string is not a palindrome.
-        if first_char.to_ascii_lowercase() != last_char.to_ascii_lowercase() {
+        if chars[left] != chars[right] {
             return false;
         }
         left += 1;
