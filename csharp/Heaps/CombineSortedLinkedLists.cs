@@ -16,12 +16,19 @@
 	}
 */
 
+class ListNodeComparer : IComparer<ListNode>
+{
+	public int Compare(ListNode a, ListNode b)
+	{
+		return a.Val - b.Val;
+	}
+}
+
 public class Solution
 {
 	public ListNode CombineSortedLinkedLists(ListNode[] lists)
 	{
-		PriorityQueue<ListNode, ListNode> heap = new(
-			Comparer<ListNode>.Create((x, y) => x.Val - y.Val));
+		PriorityQueue<ListNode, ListNode> heap = new(new ListNodeComparer());
 
 		// Push the head of each linked list into the heap.
 		foreach (ListNode head in lists)
