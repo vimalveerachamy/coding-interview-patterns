@@ -1,4 +1,6 @@
-﻿/*
+﻿using ds.ListNode;
+
+/*
 	Definition of ListNode:
 	class ListNode
 	{
