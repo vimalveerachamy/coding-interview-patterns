@@ -1,4 +1,6 @@
-﻿/*
+﻿using ds.Interval;
+
+/*
 	Definition of Interval:
 	class Interval
     {
