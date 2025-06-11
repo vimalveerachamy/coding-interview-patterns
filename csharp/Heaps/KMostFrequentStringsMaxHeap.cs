@@ -1,33 +1,52 @@
-﻿public class Solution
+﻿using ds.Pair;
+
+/*
+    Definition of Pair:
+    class Pair
+    {
+	    public string Str { get; }
+	    public int Freq { get; }
+
+	    public Pair(string str, int freq)
+	    {
+		    Str = str;
+		    Freq = freq;
+	    }
+    }
+*/
+
+class MaxHeapPairComparer : IComparer<Pair>
+{
+    public int Compare(Pair a, Pair b)
+    {
+        // Prioritize lexicographical order for strings with equal frequencies.
+        if (a.Freq == b.Freq)
+            return string.Compare(a.Str, b.Str, StringComparison.Ordinal);
+
+        // Otherwise, prioritize strings with higher frequencies.
+        return b.Freq - a.Freq;
+    }
+}
+
+public class Solution
 {
     public string[] KMostFrequentStringsMaxHeap(string[] strs, int k)
     {
+        // We use a Dictionary to count the frequency of each string.
         Dictionary<string, int> freqs = new Dictionary<string, int>();
-
-        PriorityQueue<string, (string str, int freq)> maxHeap = new(
-            Comparer<(string str, int freq)>.Create((x, y) =>
-            {
-                if (x.freq == y.freq)
-                    return y.str.CompareTo(x.str);
-
-                return y.freq - x.freq;
-            }));
-
-        // Count the frequency of each string.
         foreach (string str in strs)
             freqs[str] = freqs.GetValueOrDefault(str) + 1;
 
-        // Enqueue all the (string, frequency) pairs in the maxHeap
-        // which will ensure the most frequent strs are at the top
+        // Create the max heap by adding all Pair objects.
+        PriorityQueue<Pair, Pair> maxHeap = new(new MaxHeapPairComparer());
         foreach ((string str, int freq) in freqs)
-            maxHeap.Enqueue(str, (str, freq));
+            maxHeap.Enqueue(new Pair(str, freq), new Pair(str, freq));
 
-        // Pop the most frequent string off the heap 'k' times and return 
-        // these 'k' most frequent strings.
-        List<string> res = [];
+        // Pop the most frequent strings off the heap 'k' times.
+        List<string> result = new();
         for (int i = 0; i < k && maxHeap.Count > 0; i++)
-            res.Add(maxHeap.Dequeue());
+            result.Add(maxHeap.Dequeue().Str);
 
-        return [.. res];
+        return result.ToArray();
     }
 }
