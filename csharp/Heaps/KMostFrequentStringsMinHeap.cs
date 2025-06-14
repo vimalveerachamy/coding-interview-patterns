@@ -1,30 +1,23 @@
-﻿using ds.Pair;
-
-/*
-    Definition of Pair:
-    class Pair
-    {
-	    public string Str { get; }
-	    public int Freq { get; }
-
-	    public Pair(string str, int freq)
-	    {
-		    Str = str;
-		    Freq = freq;
-	    }
-    }
-*/
-
-// Since this is a min-heap comparator, we define it to prioritize
-// lower frequency, and in case of tie, lexicographically larger string.
-class MinHeapPairComparer : IComparer<Pair>
+﻿class Pair : IComparable<Pair>
 {
-    public int Compare(Pair a, Pair b)
-    {
-        if (a.Freq == b.Freq)
-            return string.Compare(b.Str, a.Str, StringComparison.Ordinal); // Reverse order for tie
+    public string Str { get; }
+    public int Freq { get; }
 
-        return a.Freq - b.Freq; // Lower frequency has higher priority
+    public Pair(string str, int freq)
+    {
+        Str = str;
+        Freq = freq;
+    }
+
+    // Since this is a min-heap comparator, we can use the same 
+    // comparator as the one used in the max-heap, but reversing the 
+    // inequality signs to invert the priority.
+    public int CompareTo(Pair other)
+    {
+        if (this.Freq == other.Freq)
+            return string.Compare(other.Str, this.Str, StringComparison.Ordinal);
+
+        return this.Freq - other.Freq;
     }
 }
 
@@ -32,18 +25,18 @@ public class Solution
 {
     public string[] KMostFrequentStringsMinHeap(string[] strs, int k)
     {
-        // Count the frequency of each string using a dictionary.
-        Dictionary<string, int> freqs = new Dictionary<string, int>();
+        Dictionary<string, int> freqs = [];
         foreach (string str in strs)
             freqs[str] = freqs.GetValueOrDefault(str) + 1;
 
         // Initialize the min-heap with custom Pair comparator.
-        PriorityQueue<Pair, Pair> minHeap = new(new MinHeapPairComparer());
+        PriorityQueue<Pair, Pair> minHeap = new();
 
         // Add all (string, frequency) pairs to the heap.
         foreach ((string str, int freq) in freqs)
         {
-            minHeap.Enqueue(new Pair(str, freq), new Pair(str, freq));
+            Pair pair = new Pair(str, freq);
+            minHeap.Enqueue(pair, pair);
 
             // If heap size exceeds 'k', pop the lowest frequency string to 
             // ensure the heap only contains the 'k' most frequent words so far.
@@ -51,8 +44,10 @@ public class Solution
                 minHeap.Dequeue();
         }
 
-        // Pop the remaining 'k' strings and reverse the result so that 
-        // most frequent strings are listed first.
+        // Return the 'k' most frequent strings by popping the remaining 'k' 
+        // strings from the heap. Since we're using a min-heap, we need to 
+        // reverse the result after popping the elements to ensure the most 
+        // frequent strings are listed first.
         List<string> result = [];
         while (minHeap.Count > 0)
             result.Add(minHeap.Dequeue().Str);

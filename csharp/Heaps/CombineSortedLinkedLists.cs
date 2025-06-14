@@ -1,26 +1,20 @@
-﻿using ds.ListNode;
-
-/*
-	Definition of ListNode:
-	class ListNode
-	{
-		public ListNode(int val, ListNode next = null)
-		{
-			Val = val;
-			Next = next;
-		}
-
-		public int Val { get; set; }
-
-		public ListNode Next { get; set; }
-	}
-*/
-
-class ListNodeComparer : IComparer<ListNode>
+﻿class ListNode : IComparable<ListNode>
 {
-	public int Compare(ListNode a, ListNode b)
+	public ListNode(int val, ListNode next = null)
 	{
-		return a.Val - b.Val;
+		Val = val;
+		Next = next;
+	}
+
+	public int Val { get; set; }
+
+	public ListNode Next { get; set; }
+
+	// Define a custom comparator for 'ListNode', enabling the min-heap 
+	// to prioritize nodes with smaller values.
+	public int CompareTo(ListNode other)
+	{
+		return this.Val - other.Val;
 	}
 }
 
@@ -28,7 +22,7 @@ public class Solution
 {
 	public ListNode CombineSortedLinkedLists(ListNode[] lists)
 	{
-		PriorityQueue<ListNode, ListNode> heap = new(new ListNodeComparer());
+		PriorityQueue<ListNode, ListNode> heap = new();
 
 		// Push the head of each linked list into the heap.
 		foreach (ListNode head in lists)
