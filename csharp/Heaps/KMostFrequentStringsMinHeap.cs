@@ -29,10 +29,8 @@ public class Solution
         foreach (string str in strs)
             freqs[str] = freqs.GetValueOrDefault(str) + 1;
 
-        // Initialize the min-heap with custom Pair comparator.
         PriorityQueue<Pair, Pair> minHeap = new();
 
-        // Add all (string, frequency) pairs to the heap.
         foreach ((string str, int freq) in freqs)
         {
             Pair pair = new Pair(str, freq);
