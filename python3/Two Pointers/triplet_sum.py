@@ -20,7 +20,7 @@ def triplet_sum(nums: List[int]) -> List[List[int]]:
             triplets.append([nums[i]] + pair)
     return triplets
 
-def pair_sum_sorted_all_pairs(nums: List[int], start: int, target: int) -> List[int]:
+def pair_sum_sorted_all_pairs(nums: List[int], start: int, target: int) -> List[List[int]]:
     pairs = []
     left, right = start, len(nums) - 1
     while left < right:
