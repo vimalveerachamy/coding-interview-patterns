@@ -6,7 +6,7 @@ fn triplet_sum_brute_force(nums: Vec<i32>) -> Vec<Vec<i32>> {
     let mut triplets = HashSet::new();
 
     // Iterate through the indexes of all triplets.
-    for i in 0..n {w
+    for i in 0..n {
         for j in (i + 1)..n {
             for k in (j + 1)..n {
                 if nums[i] + nums[j] + nums[k] == 0 {
