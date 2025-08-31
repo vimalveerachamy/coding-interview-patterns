@@ -1,0 +1,19 @@
+use std::collections::HashMap;
+
+fn pair_sum_unsorted_two_pass(nums: Vec<i32>, target: i32) -> Vec<usize> {
+    let mut num_map: HashMap<i32, usize> = HashMap::new();
+    // First pass: Populate the hash map with each number and its index
+    for (i, num) in nums.iter().enumerate() {
+        num_map.insert(*num, i);
+    }
+    // Second pass: Check for each number's complement in the hash map
+    for (i, num) in nums.iter().enumerate() {
+        let complement = target - num;
+        if let Some(&complement_index) = num_map.get(&complement) {
+            if complement_index != i {
+                return vec![i, complement_index];
+            }
+        }
+    }
+    vec![]
+}
